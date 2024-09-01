@@ -1,0 +1,65 @@
+/* ==========================================================================
+  MEDIA QUERY MANAGER
+========================================================================== */
+
+/*
+**  Desktop first approach = Desktop Styling zuerst und dann Mobile Styling
+**  mit (max-width) Styling properties !!!
+*/
+
+$breakpoint-smartphone: 767px;
+$breakpoint-tablet:    1029px;
+
+@mixin respond($breakpoint)  {
+  @if $breakpoint == tablet {
+    @media (max-width: $breakpoint-tablet) { @content};
+    // MAX = 1029px
+  }
+  @if $breakpoint == phone {
+    @media (max-width: $breakpoint-smartphone) { @content};
+    // MAX = 767px;
+  }
+}
+
+
+/* ==========================================================================
+  COLOR VARIABLES
+========================================================================== */
+
+$color-text-light: #fff;
+$color-text-dark:  #000;
+
+$color-elements-green: #00853E;
+$color-table-hover: #C8C8C8;
+
+$color-body-background: #F8F8F8;
+$color-element-background: #fff;
+$color-modal-background: rgba(0, 0, 0, 0.5);
+
+$color-login-view-background: linear-gradient(rgb(42, 125, 172), rgb(30, 87, 123));
+$color-login-form-background: rgb(34, 34, 34);
+
+$color-header-background: rgb(34, 34, 34);
+
+
+/* ==========================================================================
+  FONTS
+========================================================================== */
+
+$font-family: 'Montserrat', sans-serif;
+$font-family2: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$font-size-h1-sm:   1.3rem;
+$font-size-h1-lg:   1.8rem;
+$font-size-h1-logo: 2rem;
+
+$font-size-h2-sm: 2rem;
+$font-size-h2-lg: 1.5rem;
+
+$font-size-p-sm: .9rem;
+$font-size-p-lg: 1rem;
+
+$line-height-p-sm: 1.5;
+$line-height-p-lg: 1.7;
+
+$letter-spacing: 1px;
